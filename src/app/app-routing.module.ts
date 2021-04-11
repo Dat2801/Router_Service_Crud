@@ -5,7 +5,7 @@ import {CreateProductComponent} from './create-product/create-product.component'
 import {UpdateProductComponent} from './update-product/update-product.component';
 
 
-const router: Routes = [
+const routes: Routes = [
   {
     path: '',
     component: ListProductComponent
@@ -20,7 +20,7 @@ const router: Routes = [
   }
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(router)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 

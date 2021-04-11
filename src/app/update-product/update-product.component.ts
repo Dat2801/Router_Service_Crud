@@ -31,10 +31,6 @@ export class UpdateProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  private getProductById(id: number) {
-    this.product = this.productService.getProductById(id);
-  }
-
   edit() {
     this.productService.updateProduct(this.product);
     this.router.navigate(['/']);

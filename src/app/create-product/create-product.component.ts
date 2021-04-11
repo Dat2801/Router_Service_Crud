@@ -25,7 +25,7 @@ export class CreateProductComponent implements OnInit {
 
   createNewProduct() {
     this.productService.addNewProduct(this.product);
-    this.router.navigate(['/']);
+    this.router.navigate(['']);
   }
 
 }
