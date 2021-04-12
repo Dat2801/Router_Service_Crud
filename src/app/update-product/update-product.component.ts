@@ -32,6 +32,7 @@ export class UpdateProductComponent implements OnInit {
   }
 
   edit() {
+    console.log('call update')
     this.productService.updateProduct(this.product);
     this.router.navigate(['/']);
   }

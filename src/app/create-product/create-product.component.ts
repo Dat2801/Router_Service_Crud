@@ -15,6 +15,7 @@ export class CreateProductComponent implements OnInit {
     name: '',
     description: ''
   };
+  products: IProduct;
 
   constructor(private router: Router,
               private  productService: ProductService) {
@@ -25,7 +26,8 @@ export class CreateProductComponent implements OnInit {
 
   createNewProduct() {
     this.productService.addNewProduct(this.product);
-    this.router.navigate(['']);
+    console.log(this.product)
+    this.router.navigate(['/']);
   }
 
 }

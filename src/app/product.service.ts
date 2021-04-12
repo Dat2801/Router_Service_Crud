@@ -44,17 +44,19 @@ export class ProductService {
   }
 
   addNewProduct(product: IProduct) {
+    // console.log("call addNewProduct")
     let id = 0;
+
     for (let i = 0; i < this.productList.length; i++) {
       let max = 0;
       if (this.productList[i].id >= max) {
         max = this.productList[i].id;
         id = max + 1;
       }
+    }
       product.id = id;
       this.productList.push(product);
     }
-  }
 
   updateProduct(product: IProduct): void {
     for (let i = 0; i < this.productList.length; i++) {
